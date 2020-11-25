@@ -1,10 +1,10 @@
 var express 				= require("express"),
 	mongoose    			= require("mongoose"),
-	passport				= require("passport"),
-	bodyParser				= require("body-parser"),
-	User					= require("./models/user"),
+	passport			= require("passport"),
+	bodyParser			= require("body-parser"),
+	User				= require("./models/user"),
 	LocalStrategy			= require("passport-local"),
-	passportLocalMongoose	= require("passport-local-mongoose"),
+	passportLocalMongoose		= require("passport-local-mongoose"),
 	PORT					= 5000;
 
 mongoose.connect("mongodb://localhost:27017/secret_data", {useNewUrlParser: true, useUnifiedTopology: true});
@@ -15,7 +15,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(require("express-session")({
-	secret: "Subbu is the best east or west",
+	secret: "secretHight#$@",
 	resave: false,
 	saveUninitialized: false
 }));
